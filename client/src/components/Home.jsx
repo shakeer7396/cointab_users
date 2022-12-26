@@ -13,7 +13,7 @@ const Home = () => {
   
   const getBlogFunction = ()=>{
     
-    axios.get("https://cointab-ac72.onrender.com/user?page=0")
+    axios.get("https://new-app-u6ok.onrender.com/user?page=0")
     .then((res)=>{
       let arr = res.data.blog
       if(arr.length === 0){
@@ -30,7 +30,7 @@ const Home = () => {
 
   const fetchButton = () => {
     if(sign===false){
-      axios.post("https://cointab-ac72.onrender.com/user")
+      axios.post("https://new-app-u6ok.onrender.com/user")
       .then((res)=>{
         getBlogFunction();
         setSign(true)
@@ -45,7 +45,7 @@ const Home = () => {
 
   const deleteButton = () => {
     if(sign == true){
-      axios.delete("https://cointab-ac72.onrender.com/user")
+      axios.delete("https://new-app-u6ok.onrender.com/user")
     .then((res)=>{
       getBlogFunction()
     })

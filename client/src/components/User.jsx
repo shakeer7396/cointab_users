@@ -18,7 +18,7 @@ const User = () => {
   }, [filterTerm]);
   const getDataFunction = () => {
     axios
-      .get(`https://cointab-ac72.onrender.com/user?page=${pageNumber}`)
+      .get(`https://new-app-u6ok.onrender.com/user?page=${pageNumber}`)
       .then((res) => {
         settotal_Pages(res.data.totalPages);
         setdata(res.data.blog);
@@ -44,7 +44,7 @@ const User = () => {
 
   const filterByGender = (e) => {
     axios
-      .get(`https://cointab-ac72.onrender.com/user/search/${e.target.value}`)
+      .get(`https://new-app-u6ok.onrender.com/user/search/${e.target.value}`)
       .then((res) => {
         setdata(res.data);
         console.log(e.target.value);
