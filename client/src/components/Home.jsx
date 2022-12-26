@@ -61,6 +61,7 @@ const Home = () => {
     navigate("/users"); 
   };
   
+  
   return (
     <div className="App">
       <button onClick={fetchButton} style={{color:"green",fontSize:"40px",marginTop:"160px",marginRight:"60px"}}>Fetch Users</button>
@@ -71,9 +72,3 @@ const Home = () => {
 };
 
 export default Home;
-
-
-
-
-
-

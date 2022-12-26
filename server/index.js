@@ -10,9 +10,6 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use("/user", userRouter)
 
-
-
-
 app.get("/",(req,res)=>{
     res.send("Welcome to Home Page")
 })

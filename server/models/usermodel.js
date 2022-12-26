@@ -10,6 +10,8 @@ const userSchema = new Schema({
     pin:{type:String, required:true,},
     nat: {type:String, required:true,}
 })
+
+
 const USER = model("user", userSchema)
 
 export default USER

@@ -23,7 +23,6 @@ const User = () => {
         settotal_Pages(res.data.totalPages);
         setdata(res.data.blog);
 
-        // console.log(res.data.blog)
       })
       .catch((e) => console.log(e));
   };
@@ -136,7 +135,6 @@ const User = () => {
       </div>
 
       <div className="pagination_container">
-        {/* <div>Page No. : {pageNumber + 1}</div> */}
         <div className="pagination">
           <button onClick={gotoPrevious}>≪</button>
           {pages.map((pageIndex, i) => (

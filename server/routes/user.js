@@ -30,6 +30,7 @@ async function getPost() {
   }
 }
 
+
 userRouter.get("/", async (req, res) => {
   const PAGE_SIZE = 10;
   const page = parseInt(req.query.page || 0);
@@ -45,6 +46,7 @@ userRouter.get("/", async (req, res) => {
     res.status(404).send({ message: "Not Found", Error: e });
   }
 });
+
 
 userRouter.delete("/", async (req, res) => {
   await USER.deleteMany();
