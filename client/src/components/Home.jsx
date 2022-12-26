@@ -13,7 +13,7 @@ const Home = () => {
   
   const getBlogFunction = ()=>{
     
-    axios.get("")
+    axios.get("https://coins.onrender.com/user?page=0")
     .then((res)=>{
       let arr = res.data.blog
       if(arr.length === 0){
@@ -30,7 +30,7 @@ const Home = () => {
 
   const fetchButton = () => {
     if(sign===false){
-      axios.post("")
+      axios.post("https://coins.onrender.com/user")
       .then((res)=>{
         getBlogFunction();
         setSign(true)
@@ -45,7 +45,7 @@ const Home = () => {
 
   const deleteButton = () => {
     if(sign == true){
-      axios.delete("")
+      axios.delete("https://coins.onrender.com/user")
     .then((res)=>{
       getBlogFunction()
     })
@@ -61,7 +61,7 @@ const Home = () => {
     navigate("/users"); 
   };
   
-  
+
   return (
     <div className="App">
       <button onClick={fetchButton} style={{color:"green",fontSize:"40px",marginTop:"160px",marginRight:"60px"}}>Fetch Users</button>
